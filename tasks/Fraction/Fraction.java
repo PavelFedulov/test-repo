@@ -18,13 +18,11 @@ public class Fraction {
     }
 
     public Fraction sum(int value) {
-        Fraction f = new Fraction(value, 1);
-        return new Fraction((this.numerator * f.denominator) + (this.denominator * f.numerator), this.denominator * f.denominator);
+        return sum(new Fraction(value, 1));
     }
 
     public Fraction minus(int value) {
-        Fraction f = new Fraction(value, 1);
-        return new Fraction((this.numerator * f.denominator) - (this.denominator * f.numerator), this.denominator * f.denominator);
+        return minus(new Fraction(value, 1));
     }
 
     @Override
