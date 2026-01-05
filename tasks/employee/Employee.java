@@ -4,7 +4,6 @@ public class Employee {
 
     public Employee(String name) {
         this.name = name;
-        this.dep = null;
     }
 
     public String getEmpDepName() {
