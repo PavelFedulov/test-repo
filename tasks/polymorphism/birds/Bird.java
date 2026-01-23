@@ -12,4 +12,10 @@ public abstract class Bird {
     }
 
     public abstract void sing();
+
+    public static void singAll(Bird... birds) {
+        for (Bird bird : birds) {
+            bird.sing();
+        }
+    }
 }
