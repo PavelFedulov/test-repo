@@ -1,4 +1,4 @@
-public class PolyLine {
+public class PolyLine implements Measurable {
     public Point[] points;
 
     public PolyLine() {

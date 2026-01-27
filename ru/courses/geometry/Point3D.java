@@ -5,4 +5,9 @@ public class Point3D extends Point{
         super(x, y);
         this.z = z;
     }
+
+    @Override
+    public String toString() {
+        return "{" + x + ";" + y + ";" + z + "}";
+    }
 }
