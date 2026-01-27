@@ -1,5 +1,3 @@
-package birds;
-
 import java.util.Random;
 
 public class Cuckoo extends Bird{

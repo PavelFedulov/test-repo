@@ -1,5 +1,3 @@
-package birds;
-
 public class Sparrow extends Bird{
     private final String song = "чырык";
 

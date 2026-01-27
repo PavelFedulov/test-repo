@@ -1,5 +1,3 @@
-package birds;
-
 public class StartBird {
     public static void main(String[] args) {
         Bird sparrow1 = new Sparrow("Jack");

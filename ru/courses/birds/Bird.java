@@ -1,5 +1,3 @@
-package birds;
-
 public abstract class Bird {
     private final String name;
 
