@@ -7,4 +7,13 @@ public class GeometryUtils {
         }
         return lengths;
     }
+
+    public static double sumAllAreas(AreaCalculatable... figures) {
+         double sum = 0.0;
+
+        for (AreaCalculatable n : figures) {
+            sum += n.getArea();
+        }
+        return sum;
+    }
 }

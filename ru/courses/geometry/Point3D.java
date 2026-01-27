@@ -8,6 +8,6 @@ public class Point3D extends Point{
 
     @Override
     public String toString() {
-        return "{" + x + ";" + y + ";" + z + "}";
+        return "{" + this.getX() + ";" + this.getY() + ";" + z + "}";
     }
 }

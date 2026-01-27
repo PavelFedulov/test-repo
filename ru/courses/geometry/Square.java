@@ -1,31 +1,17 @@
-public class Square {
-    Point point;
-    private int sideLength;
+public class Square implements AreaCalculatable {
+    private final Point point;
+    private final double sideLength;
 
-    public Square(int x, int y, int sideLength) {
-        checkSideLengthPositive(sideLength);
-        this.point = new Point(x,y);
-        this.sideLength = sideLength;
-    }
-
-    private static void checkSideLengthPositive(int sideLength) {
+    public Square(Point point, double sideLength) {
         if (sideLength <= 0)
             throw new IllegalArgumentException("side length must be positive");
-    }
-
-    public void setState(int x, int y, int sideLength) {
-        checkSideLengthPositive(sideLength);
-        this.point = new Point(x,y);
+        this.point = new Point(point.getX(), point.getY());
         this.sideLength = sideLength;
     }
 
-    public void setPoint(int x, int y) {
-        this.point = new Point(x,y);
-    }
-
-    public void setSideLength(int sideLength) {
-        checkSideLengthPositive(sideLength);
-        this.sideLength = sideLength;
+    @Override
+    public double getArea() {
+        return sideLength * sideLength;
     }
 
     @Override
