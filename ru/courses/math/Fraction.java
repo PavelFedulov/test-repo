@@ -1,4 +1,6 @@
-public class Fraction extends Number {
+import java.util.Objects;
+
+public class Fraction extends Number implements Cloneable{
     private final int numerator;
     private final int denominator;
 
@@ -48,5 +50,23 @@ public class Fraction extends Number {
     @Override
     public double doubleValue() {
         return (double) numerator / denominator;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
+        return Objects.equals(numerator, fraction.numerator) && Objects.equals(denominator, fraction.denominator);
+    }
+
+    @Override
+    public int  hashCode() {
+        return Objects.hash(numerator, denominator);
+    }
+
+    @Override
+    public Fraction clone() {
+        return new Fraction(this.numerator, this.denominator);
     }
 }
