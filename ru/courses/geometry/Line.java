@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Line {
     private final Point pointStart;
     private final Point pointEnd;
@@ -22,4 +24,23 @@ public class Line {
     public String toString() {
         return "Линия от " + pointStart + " до " + pointEnd;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Line line = (Line) o;
+        return pointStart.equals(line.pointStart) && pointEnd.equals(line.pointEnd);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(pointStart, pointEnd);
+    }
+
+    @Override
+    public Line clone() {
+        return new Line(pointStart, pointEnd);
+    }
+
 }
